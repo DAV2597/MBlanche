@@ -1,0 +1,26 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Times New Roman', Times, serif;
+}
+:root{
+   
+  --color-Button :rgb(0,176,240);
+  --Color:#266706;
+  --Box-shadow-btn:-2px 3px 25px #3063C9;
+
+  --color-light:rgba(132,139,200,0.4);
+  --box-shadow:0 0 10px var(--color-light);
+  --color-dark-variant:#677483;
+}
+body{
+background:#D6D6D6;
+color: rgba(0, 0, 0, 0.508);
+
+  height: auto;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-between;
+  }

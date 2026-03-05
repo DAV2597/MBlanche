@@ -5,11 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';
 
-// =========================================================================
-// --- BLOC 1 : LES OUTILS (IMPORTS NETTOYÉS ET COMPLETS) ---
-// =========================================================================
 
-// Icônes (Correction des manques pour l'horaire de fête et nettoyage des doublons)
 import { 
   FaUserShield, FaCamera, FaDoorOpen, FaPlusCircle, FaBook, 
   FaBullhorn, FaUsers, FaGlassCheers, FaTools, FaUserSlash, 
@@ -999,7 +995,7 @@ const scColors = {
     vertMbClair: "#e9f0e6", // Ajouté pour corriger l'erreurcolors_fete' is not defined
     grisMb: "#D6D6D6",
 };
-
+const colors_fete = scColors;
 const AdminContainer = styled.div`
   padding: 20px; display: flex; flex-direction: column; align-items: center; gap: 20px;
   min-height: 100vh; background-color: #f4f7f6; font-family: 'Poppins', sans-serif;

@@ -18,7 +18,7 @@ import Communiques from './Pages/Communiques/Communiques';
 import AdminLogin from './Pages/AdminLogin/AdminLogin'; 
 // --- AJOUTEZ CETTE LIGNE ICI ---
 import HoraireAssainisseur from "./Pages/HoraireAssainisseur/HoraireAssainisseur";
-import Fetes from './Pages/fetes/Fetes';
+import Fetes from './Pages/Fetes/Fetes';
 // -------------------------------
 import Contact from './Pages/Contact/Contact'; 
 // ---------------------------------

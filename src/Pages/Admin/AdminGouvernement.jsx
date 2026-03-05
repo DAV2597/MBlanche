@@ -1,22 +1,37 @@
-// src/Pages/Admin/AdminGouvernement.jsx
+// src/Pages/Admin/AdminGouvernement.jsx (Imports Finalisés et Corrigés)
 import React, { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { useNavigate } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify'; 
 import 'react-toastify/dist/ReactToastify.css';
 
-// Icônes (Mise à jour et NETTOYAGE DES DOUBLONS)
-import { FaUserShield, FaCamera, FaDoorOpen, FaPlusCircle, FaBook, FaBullhorn, FaUsers, FaGlassCheers, FaTools, FaUserSlash, FaEdit, FaSave, FaTimesCircle, FaClock, FaSpinner, FaTrash, FaQrcode, FaVideo, FaSearch, FaBroom, FaUserAstronaut, FaDonate, FaCheck, FaHeartBroken } from 'react-icons/fa';
+// =========================================================================
+// --- BLOC 1 : LES OUTILS (IMPORTS NETTOYÉS ET COMPLETS) ---
+// =========================================================================
 
-// --- IMPORT FIREBASE ---
+// Icônes (Correction des manques pour l'horaire de fête et nettoyage des doublons)
+import { 
+  FaUserShield, FaCamera, FaDoorOpen, FaPlusCircle, FaBook, 
+  FaBullhorn, FaUsers, FaGlassCheers, FaTools, FaUserSlash, 
+  FaEdit, FaSave, FaTimesCircle, FaClock, FaSpinner, FaTrash, 
+  FaQrcode, FaVideo, FaSearch, FaBroom, FaUserAstronaut, 
+  FaDonate, FaCheck, FaHeartBroken, 
+  FaIdCard, FaCalendarAlt // Ajoutés pour l'horaire de fête
+} from 'react-icons/fa';
+
+// --- IMPORT FIREBASE (Mise à jour complète) ---
 import { db } from '../../firebaseConfig'; 
-// onSnapshot : écoute en temps réel. doc/deleteDoc : pour la suppression.
-import { collection, addDoc, serverTimestamp, onSnapshot, doc, deleteDoc, updateDoc, query, orderBy, setDoc } from "firebase/firestore";
-// -----------------------
+// Ajout de query, orderBy, updateDoc, setDoc pour le dynamisme
+import { 
+  collection, addDoc, serverTimestamp, onSnapshot, 
+  doc, deleteDoc, updateDoc, query, orderBy, setDoc 
+} from "firebase/firestore";
+// -----------------------------------------------
 
-// Configuration locale (Assurez-Œvous que ce fichier existe)
+// Configuration locale (Assurez-vous que ce fichier existe)
 import { PERMISSIONS } from '../../config/gouvernementConfig'; 
 
+// =========================================================================
 // Couleurs MB (Définition unique pour tout le fichier)
 const colors = {
   vertMb: "#266706",

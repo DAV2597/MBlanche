@@ -2,16 +2,15 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Votre configuration Firebase (Vérifiée et nettoyée)
+// Configuration Firebase utilisant les variables d'environnement Vite
 const firebaseConfig = {
-  apiKey: "AIzaSyDYqdjkzv4RN46QbPEKKepf1T2znQG26-Y",
-  authDomain: "mblanche-151d6.firebaseapp.com",
-  projectId: "mblanche-151d6",
-  storageBucket: "mblanche-151d6.firebasestorage.app",
-  messagingSenderId: "180780207014",
-  appId: "1:180780207014:web:a30f2dbaed4af77812dd67",
-  // measurementId est facultatif et nécessite getAnalytics,
-  // nous ne l'activons pas ici pour Firestore.
+  // import.meta.env est la syntaxe spécifique à Vite pour lire le .env
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
 
 // Initialiser Firebase

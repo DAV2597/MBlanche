@@ -1091,25 +1091,3 @@ const DeleteUserItem = styled.div`
     &.isBoulet { border-left: 3px solid #f0ad4e; }
     &.isAncien { border-left: 3px solid ${scColors.vertMb}; }
 `;
-
-// -- STYLE SPÉCIFIQUE POUR LES FÊTES --
-// FormContainerFete n'est plus utilisé car j'ai fusionné le style graphique dans FormContainer pour la cohérence.
-const MediaUploadArea = styled.div`
-    margin-top: 10px;
-    label { display: block; font-size: 13px; font-weight: 500; color: #555; margin-bottom: 8px; }
-    .UploadButtons { display: flex; gap: 10px; }
-    .BtnUpload {
-        background: none; border: 2px dashed #ccc; color: #777; padding: 15px; border-radius: 8px; flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; font-size: 12px; cursor: pointer; transition: all 0.3s;
-        &:hover { border-color: ${scColors.vertMb}; color: ${scColors.vertMb}; background-color: ${scColors.vertMbClair}; }
-        &.photo svg { color: #f0ad4e; } &.video svg { color: #d9534f; }
-        svg { font-size: 20px; }
-    }
-    .MediaPreviewWrapper {
-        position: relative; width: 100%; max-height: 200px; border-radius: 8px; overflow: hidden; border: 2px solid #eee;
-        .PreviewContent { width: 100%; height: 100%; object-fit: contain; display: block; }
-        .BtnRemoveMedia {
-            position: absolute; top: 10px; right: 10px; background-color: rgba(255, 0, 0, 0.7); color: white; border: none; width: 30px; height: 30px; border-radius: 50%; display: flex; justify-content: center; align-items: center; cursor: pointer; font-size: 14px; min-width: auto; padding: 0; transition: background 0.3s;
-            &:hover { background-color: rgba(255, 0, 0, 1); }
-        }
-    }
-`;
